@@ -1,0 +1,39 @@
+WindowManager:
+    StartGame:
+    Counter:
+
+<StartGame>:
+    name:"startGame"
+    player_name: player_name
+    players: players
+    GridLayout:
+        size:root.width, root.height
+        cols:1
+        GridLayout:
+            cols:2
+            Label:
+                text:"Name of player"
+            TextInput:
+                multiline:False
+                id: player_name
+        GridLayout:
+            cols:1
+            Button:
+                text: "Add player"
+                on_press: root.addPlayer()
+            Label:
+                text:"Players"
+            Label:
+                id: players
+                text:""
+            Button:
+                text:"start game!"
+                on_release:
+                    app.root.current="counter"
+
+<Counter>:
+    name:"counter"
+    Label:
+        text:"asdadasd"
+
+
